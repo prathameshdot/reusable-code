@@ -1,0 +1,207 @@
+/* Header */
+header {
+  background:#ffffff; /* CHANGED TO WHITE */
+  padding:16px 0;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-bottom:1px solid #ddd;
+  box-shadow: 0 2px 12px rgba(15,23,42,0.06);
+  
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 55px;
+  margin-right: 20px;
+}
+
+/* NAV */
+.nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav > li {
+  position: relative;
+}
+
+.nav > li > a {
+  color: #000;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav > li > a:hover {
+  color: #e53935;
+}
+
+/* DROPDOWN */
+.nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 260px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  z-index: 2000;
+}
+
+.nav li:hover > ul {
+  display: block;
+}
+
+.nav li ul li {
+  position: relative;
+}
+
+.nav li ul li a {
+  background: #fff;
+  color: #000;
+  padding: 12px 16px;
+  display: block;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+}
+
+.nav li ul li a:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* SUB-CATEGORY DROPDOWN – RIGHT SIDE, STARTS BELOW PARENT */
+.nav li ul li ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 260px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  border-left: 1px solid #ddd;
+}
+
+/* Show sub-category on hover */
+.nav li ul li:hover > ul {
+  display: block;
+}
+
+.nav li ul li:hover > ul {
+  display: block;
+}
+
+/* Enquiry button */
+.enquire-btn a {
+  background: #012d48;
+  color: #ffffff !important;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.enquire-btn a:hover,
+.enquire-btn a:active,
+.enquire-btn a:focus {
+  color: #ffffff !important;
+  outline: none;
+}
+
+/* MOBILE HEADER */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Tablet & Mobile */
+@media (max-width: 992px) {
+  .header-flex {
+    flex-wrap: wrap;
+  }
+
+  /* Hamburger */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* NAV RESET */
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav > li {
+    width: 100%;
+  }
+
+  .nav > li > a {
+    width: 100%;
+    padding: 14px 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* FIRST DROPDOWN */
+  .nav li ul {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    display: none;
+  }
+
+  .nav li.open > ul {
+    display: block;
+  }
+
+  .nav li ul li a {
+    padding-left: 35px;
+  }
+
+  /* SECOND LEVEL DROPDOWN */
+  .nav li ul li ul {
+    position: static;
+    width: 100%;
+    border-left: none;
+    display: none;
+  }
+
+  .nav li ul li.open > ul {
+    display: block;
+  }
+
+  .nav li ul li ul a {
+    padding-left: 55px;
+  }
+
+  /* Enquiry button full width */
+  .enquire-btn {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .enquire-btn a {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+}

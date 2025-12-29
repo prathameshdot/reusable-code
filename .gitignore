@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+.env
+.vscode/settings.json
+
+# Original website files (not needed in repo)
+Gurumukh-Web/
+
+# OS generated files
+Thumbs.db
+*.swp
+*.swo
+
+# IDE files
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+*.tmp
+*.temp

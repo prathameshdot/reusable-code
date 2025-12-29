@@ -1,0 +1,98 @@
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .hero-section .container {
+    flex-direction: column;
+  }
+
+  .about-content,
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .services-grid,
+  .portfolio-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hero responsive */
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  /* Highlights responsive */
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Why choose responsive */
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Categories responsive */
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Industries responsive */
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stats responsive */
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CTA responsive */
+  .cta-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Footer responsive */
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  section {
+    padding: 2rem 0;
+  }
+
+  /* Hero small screen */
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}

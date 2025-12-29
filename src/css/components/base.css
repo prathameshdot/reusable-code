@@ -1,0 +1,84 @@
+/* CSS Variables */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --accent-color: #28a745;
+  --text-color: #333;
+  --bg-color: #fff;
+  --light-bg: #f8f9fa;
+  --dark-bg: #343a40;
+  --border-color: #dee2e6;
+  --font-family: 'Segoe UI',Arial,sans-serif;
+  --font-size-base: 16px;
+  --line-height: 1.6;
+  --spacing-unit: 1rem;
+  --container-width: 1200px;
+}
+
+/* Reset */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif;}
+body{background:#f6f8fb;color:#333;line-height:1.6;}
+.container{
+  width:80%;                 /* wider container */
+  max-width:1000px;          /* more horizontal room */
+  margin-left:10px;          /* 🔥 pushes header LEFT */
+  margin-right:auto;
+}
+
+
+.section{padding:90px 0;}
+h2{text-align:center;font-size:34px;margin-bottom:50px;color:#111;}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: var(--spacing-unit);
+  font-weight: 600;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+  margin-bottom: var(--spacing-unit);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
+}

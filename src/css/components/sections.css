@@ -1,0 +1,472 @@
+/* Sections */
+section {
+  padding: 4rem 0;
+}
+
+/* HERO IMAGE SUPPORT */
+.hero-slide img{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;      /* IMAGE SIZING */
+  z-index:0;
+}
+
+/* Overlay gradient stays above image */
+.hero-slide::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    120deg,
+    rgba(0, 19, 41, 0.75),
+    rgba(1, 13, 24, 0.75)
+  );
+  z-index:1;
+}
+
+/* Ensure content stays above image */
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+.hero-carousel{
+  position:relative;
+  height:520px;
+  overflow:hidden;
+}
+.hero-slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity 1s ease;
+  background-size:cover;
+  background-position:center;
+}
+.hero-slide.active{opacity:1;}
+
+.slide-1{
+  background-image:
+    linear-gradient(120deg,rgba(13,71,161,.85),rgba(66,165,245,.85)),
+    url('https://via.placeholder.com/1920x900?text=Power+Press+Machines');
+}
+.slide-2{
+  background-image:
+    linear-gradient(120deg,rgba(21,101,192,.85),rgba(100,181,246,.85)),
+    url('https://via.placeholder.com/1920x900?text=Shearing+Machines');
+}
+.slide-3{
+  background-image:
+    linear-gradient(120deg,rgba(38,50,56,.85),rgba(84,110,122,.85)),
+    url('https://via.placeholder.com/1920x900?text=Hydraulic+Machines');
+}
+.slide-4{
+  background-image:
+    linear-gradient(120deg,rgba(26,35,126,.85),rgba(57,73,171,.85)),
+    url('https://via.placeholder.com/1920x900?text=Manual+Machines');
+}
+
+.hero-content{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:#fff;
+}
+.hero-content h1{font-size:48px;margin-bottom:15px;}
+.hero-content p{font-size:20px;max-width:850px;margin-bottom:30px;}
+
+.hero-dots{
+  position:absolute;
+  bottom:30px;
+  width:100%;
+  text-align:center;
+}
+.hero-dot{
+  height:12px;width:12px;
+  background:#ddd;
+  border-radius:50%;
+  display:inline-block;
+  margin:0 6px;
+  cursor:pointer;
+}
+.hero-dot.active{background:#e53935;}
+  color:#fff;
+}
+.hero-content h1{font-size:48px;margin-bottom:15px;}
+.hero-content p{font-size:20px;max-width:850px;margin-bottom:30px;}
+
+.hero-dots{
+  position:absolute;
+  bottom:30px;
+  width:100%;
+  text-align:center;
+}
+.hero-dot{
+  height:12px;width:12px;
+  background:#ddd;
+  border-radius:50%;
+  display:inline-block;
+  margin:0 6px;
+  cursor:pointer;
+}
+.hero-dot.active{background:#e53935;}
+
+.about-section,
+.services-section,
+.portfolio-section,
+.testimonials-section,
+.contact-section {
+  background-color: var(--bg-color);
+}
+
+.about-section {
+  background-color: var(--light-bg);
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  padding: 2rem;
+  background-color: var(--light-bg);
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-item {
+  text-align: center;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: var(--spacing-unit);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial {
+  padding: 2rem;
+  background-color: var(--light-bg);
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: var(--spacing-unit);
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact-form {
+  background-color: var(--light-bg);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-unit);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-info {
+  padding: 2rem;
+}
+
+.contact-info h3 {
+  margin-bottom: var(--spacing-unit);
+}
+
+/* =========================
+   COMPANY HIGHLIGHTS
+========================= */
+.highlights {
+  background: #f6f8fb;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.highlight-card {
+  background: #fff;
+  padding: 35px 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(15,23,42,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-bottom: 5px solid #2563eb;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(15,23,42,0.15);
+}
+
+.highlight-card h3 {
+  color: #2563eb;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+/* =========================
+   WHY CHOOSE US – EXPERT CSS
+========================= */
+.why-choose {
+  background: linear-gradient(135deg, #e3eaf3, #f8fafc);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.why-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 34px 26px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.why-card:hover::before {
+  opacity: 0.05;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 45px rgba(15,23,42,0.18);
+}
+
+.why-card span {
+  font-size: 42px;
+  color: #2563eb;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.why-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.why-card p {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* =========================
+   PRODUCT CATEGORIES
+========================= */
+.product-categories {
+  background: #fff;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  margin-top: 45px;
+}
+
+.category-card {
+  background: #f6f8fb;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.08);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+}
+
+.category-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.category-card h3 {
+  padding: 18px;
+  color: #2563eb;
+  font-size: 20px;
+}
+
+/* =========================
+   INDUSTRIES WE SERVE
+========================= */
+.industries {
+  background: #f6f8fb;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.industry-card {
+  background: #fff;
+  padding: 22px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(15,23,42,0.08);
+}
+
+/* =========================
+   STATS
+========================= */
+.stats {
+  background: #e3eaf3;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 35px 15px;
+  text-align: center;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.08);
+}
+
+.stat-number {
+  font-size: 40px;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.stat-label {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+/* =========================
+   CTA
+========================= */
+.cta {
+  background: linear-gradient(90deg,#0f172a 60%,#1e293b 100%);
+  color: #fff;
+}
+
+.cta-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cta-btn {
+  background: #fff;
+  color: #0e1420;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.cta-btn:hover {
+  background: #2563eb;
+  color: #fff;
+  border: 2px solid #fff;
+}
